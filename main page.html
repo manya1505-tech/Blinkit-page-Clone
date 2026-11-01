@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blinkit Home Page</title>
+    <link rel="stylesheet" href="blinkit.css">
+    <style> 
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #333;
+}
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 35px;
+    border-bottom: 1px solid #ddd;
+}
+
+header h2 {
+    color: #f5c842;
+    font-size: 35px;
+}
+
+header span {
+    color: #0c831f;
+}
+
+header p {
+    font-size: 13px;
+    color: gray;
+    margin-top: 5px;
+}
+
+header input {
+    width: 400px;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    background-color: #f5f5f5;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+header button {
+    background-color: #0c831f;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 7px;
+}
+.image{
+    margin-left: 16px;
+}
+
+
+.imgg {
+    margin-left: 5px;
+    height: 90vh;
+    width:1450px;
+
+}
+
+
+
+body > h2 {
+    margin: 25px 35px;
+    font-size: 23px;
+}
+
+.offers {
+    display: flex;
+    gap: 20px;
+    margin: 20px 35px;
+    
+}
+
+.offer_img1 {
+   
+    height: 260px;
+    width: 380px; 
+}
+
+.offer_img2 {
+    height: 260px;
+    width: 380px; 
+    
+}
+
+.offer_img3 {
+    height: 260px;
+    width: 380px; 
+}
+
+.offer button {
+    background-color: #0c831f;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+}
+
+.offer h1 {
+    font-size: 35px;
+    margin-top: 15px;
+}
+
+
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 15px;
+    margin: 30px 35px; 
+}
+
+.category {
+    
+    text-align: center;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.category img {
+    width: 90px;
+    height: 180px;
+    object-fit: cover;
+   
+}
+   
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #08691a;
+} 
+
+
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    header input {
+        width: 100%;
+    }
+
+    
+
+    .offers {
+        flex-direction: column;
+    }
+
+    .offer {
+        width: 100%;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.image a {
+    display: block;
+    cursor: pointer;
+}
+ .imgg {
+    cursor: pointer;
+}
+
+.login-link {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+    
+.login-link:hover {
+    color: #0c831f;
+}
+    
+.offer a {
+    display: block;
+    cursor: pointer;
+}
+    
+.offer img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+    
+.category a {
+    display: block;
+    cursor: pointer;
+}
+.category img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.category a:hover img {
+    transform: scale(1.04);
+}
+
+.category a:focus,
+.category a:focus-visible,
+.category a:active {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}    
+button, a {
+    cursor: pointer;
+}
+
+.image {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.image a {
+    display: block;
+    overflow: hidden;
+}
+
+.imgg {
+    transition: transform 0.3s ease;
+}
+
+.image a:hover .imgg {
+    transform: scale(1.02);
+}
+
+
+.offer {
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.offer a {
+    display: block;
+    overflow: hidden;
+}
+
+.offer img {
+    transition: transform 0.3s ease;
+}
+
+.offer a:hover img {
+    transform: scale(1.04);
+}
+
+.image a:focus,
+.image a:focus-visible,
+.offer a:focus,
+.offer a:focus-visible {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.location {
+    cursor: pointer;
+}
+
+.delivery-time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.delivery-time b {
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+}
+
+.location-arrow {
+    font-size: 12px;
+    color: #333;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+
+<body>
+
+    
+    <header>
+
+        <h2>blink<span>it</span></h2>
+
+        <div class="location">
+            <div class="delivery-time">
+                <b>Delivery in 17 minutes</b>
+                <span class="location-arrow">▼</span>
+            </div>
+            <p>Kaiser Ganj, Delhi Rd., Meerut, 250002</p>
+        </div>
+
+        <input type="text" id="searchBox" placeholder="Search 'chocolate'">
+        <a href="login.html" class="login-link">Login</a>
+
+        
+
+        <button>🛒 My Cart</button>
+
+    </header>
+
+
+    <div class="image">
+        <a href="offers.html">
+        <img class="imgg"
+        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=2700/layout-engine/2026-01/Frame-1437256605-2-2.jpg"
+        style="height:300px; width:1200px;">
+        </a>
+    </div>
+
+
+
+    
+    <h2>Explore More</h2>
+
+    <div class="offers">
+
+    <div class="offer">
+        <a href="pharmacy.html">
+            <img class="offer_img2"
+            src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/pharmacy-WEB.jpg">
+        </a>
+    </div>
+
+    <div class="offer">
+        <a href="petcare.html">
+            <img class="offer_img3"
+            src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2026-01/pet_crystal_WEB-1.png">
+        </a>
+    </div>
+
+    <div class="offer">
+        <a href="babycare.html">
+            <img class="offer_img1"
+            src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2026-01/baby_crystal_WEB-1.png">
+        </a>
+    </div>
+    </div>
+
+
+   
+   <div class="categories">
+
+    <div class="category">
+        <a href="category.html?name=paan">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-12/paan-corner_web.png">
+        </a>
+
+    </div>
+
+    <div class="category">
+        <a href="category.html?name=dairy-bread-eggs">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-2_10.png">
+        </a>
+    </div>
+
+    <div class="category">
+        <a href="category.html?name=fruits-vegetables">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-3_9.png">
+        </a>
+    </div>
+
+    <div class="category">
+        <a href="category.html?name=cold-drinks-juices">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-4_9.png">
+        </a>
+    </div>
+
+    <div class="category">
+        <a href="category.html?name=snacks-munchies">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-5_4.png">
+        </a>
+
+    </div>
+    <div class="category">
+        <a href="category.html?name=breakfast-instant-food">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-6_5.png">
+        </a>
+
+    </div>
+    <div class="category">
+        <a href="category.html?name=sweet-tooth">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-7_3.png">
+        </a>
+
+    </div>
+    <div class="category">
+        <a href="category.html?name=bakery-biscuits">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-8_4.png">
+        </a>
+
+    </div>
+    <div class="category">
+        <a href="category.html?name=tea-coffee-milk">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2025-11/Slice-7-1_0.png">
+        </a>
+
+    </div>
+
+    <div class="category">
+        <a href="category.html?name=atta-rice-dal">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-10.png">
+        </a>
+
+    </div>
+    <div class="category">
+        <a href="category.html?name=masala-dry-fruits">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png">
+        </a>
+
+    </div>
+    <div class="category">
+        <a href="category.html?name=chicken-meat-fish">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-12.png">
+        </a>
+
+    </div>
+    <div class="category">
+        <a href="category.html?name=organic-healthy">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-13.png">
+        </a>
+
+    </div>
+    <div class="category">
+        <a href="category.html?name=baby-care">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-14.png">
+        </a>
+
+    </div>
+    <div class="category">
+        <a href="category.html?name=pharma-wellness">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-15.png">
+        </a>
+
+    </div>
+    <div class="category">
+        <a href="category.html?name=cleaning-essentials">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-16.png">
+        </a>
+
+    </div>
+    <div class="category">
+        <a href="category.html?name=home-office">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-17.png">
+        </a>
+
+    </div>
+    <div class="category">
+        <a href="category.html?name=personal-care">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-18.png">
+        </a>
+    </div>
+    <div class="category">
+        <a href="category.html?name=pet-care">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-19.png">
+        </a>
+
+    </div>
+     <div class="category">
+        <a href="category.html?name=toys-games"></a>
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-20.png">
+        </a>
+    </div>
+
+     
+    
+
+</div>
+    
+
+</body>
+</html>
